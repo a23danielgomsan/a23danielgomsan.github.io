@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Daniel">
+    <meta name="description" content="Formulario de contacto con el restaurante">
+    <meta name="keywords" content="contacto, mensaje, restaurante, formulario">
+    <title>Contacto</title>
+</head>
+<body>
+    <header>
+        <h1>Envíenos su mensaje</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Volver al menú principal del restaurante</a>
+    </nav>
+
+    <main>
+        <form action="#" method="post">
+            <p>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Su nombre" required>
+            </p>
+            <p>
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" placeholder="Su correo electrónico" required>
+            </p>
+            <p>
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="Su teléfono">
+            </p>
+            <p>
+                <label for="asunto">Asunto:</label>
+                <input type="text" id="asunto" name="asunto" required>
+            </p>
+            <p>
+                <label for="mensaje">Mensaje:</label><br>
+                <textarea id="mensaje" name="mensaje" rows="8" cols="60" maxlength="500" required></textarea>
+                <br>0 / 500
+            </p>
+            <p>
+                <button type="submit">ENVIAR</button>
+            </p>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Daniel - Desarrollo web</p>
+    </footer>
+</body>
+</html>

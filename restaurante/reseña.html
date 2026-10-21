@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Daniel">
+    <meta name="description" content="Formulario para escribir la reseña de un plato del restaurante">
+    <meta name="keywords" content="reseña, plato, opinión, restaurante, formulario">
+    <title>Reseña de un plato</title>
+</head>
+<body>
+    <header>
+        <h1>Reseña de un plato</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Volver al menú principal del restaurante</a>
+    </nav>
+
+    <main>
+        <form action="#" method="post">
+            <p>
+                <label for="plato">Plato:</label>
+                <select id="plato" name="plato" required>
+                    <option value="">-- Elige un plato --</option>
+                    <option value="paella">Paella</option>
+                    <option value="salmorejo">Salmorejo</option>
+                    <option value="rabo">Rabo de toro</option>
+                </select>
+            </p>
+            <p>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </p>
+            <p>
+                <label for="resena">Reseña del plato:</label><br>
+                <textarea id="resena" name="resena" rows="6" cols="50" required></textarea>
+            </p>
+            <p>
+                <button type="submit">Enviar</button>
+                <button type="reset">Limpiar</button>
+            </p>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Daniel - Desarrollo web</p>
+    </footer>
+</body>
+</html>
