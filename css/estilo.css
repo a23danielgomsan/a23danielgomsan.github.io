@@ -1,19 +1,43 @@
-
+body{
+    
+   background-image: url("../restaurante/img/fondoindex.jpg");
+}
 header{
     text-align: center;
     background-color: cadetblue;
+    padding: 1px;
+border-radius: 8px;
+color: aliceblue;
 }
 
 nav{
     text-align: center;
-    background-color:cadetblue;
+    background-color:;
 }
 
 main {
-    color:cadetblue;
+    color:aliceblue;
 }
-img{
 
-align-content:;
+.mi-imagen {
+  width: 700px;            /* ancho */
+  height: auto;            /* alto proporcional */
+  border-radius: 10px;     /* esquinas redondeadas */
+  border: 3px solid #333;  /* borde */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* sombra */
+  opacity: 0.9;            /* transparencia */
+    display: block;
+    margin: 0 auto;
+}
+a,
+a:visited {
+  color:aliceblue;            /* el color que quieras */
+  text-decoration: none;  /* quita el subrayado (opcional) */
+}
 
+a:hover{
+    text-decoration: underline;
+    color: blue;
+}
+footer{color:aliceblue
 }
