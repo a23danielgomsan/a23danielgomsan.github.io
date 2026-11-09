@@ -1,43 +1,229 @@
 body{
     
-   background-image: url("../restaurante/img/fondoindex.jpg");
+  background: linear-gradient(180deg, #1f2a30, #2e4a52);
+    min-height: 100vh;
 }
+
+
+              background-image: url("../restaurante/img/fondoindex1.jpg");
 header{
-    text-align: center;
-    background-color: cadetblue;
-    padding: 1px;
-border-radius: 8px;
-color: aliceblue;
+              text-align: center;
+               background-color:  #2f6f73;
+               padding: 1px;
+               border-radius: 8px;
+               color:#f4f1ea;
 }
 
 nav{
-    text-align: center;
-    background-color:;
+               text-align: center;
+                background-color:#2f6f73;
 }
 
 main {
-    color:aliceblue;
+              color:aliceblue;
 }
 
 .mi-imagen {
-  width: 700px;            /* ancho */
-  height: auto;            /* alto proporcional */
-  border-radius: 10px;     /* esquinas redondeadas */
-  border: 3px solid #333;  /* borde */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* sombra */
-  opacity: 0.9;            /* transparencia */
-    display: block;
-    margin: 0 auto;
+            width: 700px;            /* ancho */
+             height: auto;            /* alto proporcional */
+             border-radius: 10px;     /* esquinas redondeadas */
+                border: 3px solid #333;  /* borde */
+               box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* sombra */
+             opacity: 0.9;            /* transparencia */
+            display: block;
+             margin: 0 auto;
 }
 a,
 a:visited {
-  color:aliceblue;            /* el color que quieras */
-  text-decoration: none;  /* quita el subrayado (opcional) */
+                  color:#e8a23a;            /* el color que quieras */
+                 text-decoration: none;  /* quita el subrayado (opcional) */
 }
 
 a:hover{
-    text-decoration: underline;
-    color: blue;
+                  text-decoration: underline;
+                   color:#e8a23a;
 }
-footer{color:aliceblue
+footer{
+                   color:aliceblue
+}
+ul > li {
+                 text-align: left;
+}
+
+h2 {
+                  text-align: center;
+                   color: #e8a23a;
+}
+
+.titulo-menu {
+                   text-align:left;
+                   color: #e8a23a;
+}
+h1 {
+    color: #f4f1ea;
+    text-align: center;
+}
+/* ===== 1. RESETEO DE ESTILOS ===== */
+
+/* Quita márgenes y rellenos por defecto y hace que el padding no agrande las cajas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== 2. ESTILOS GENERALES ===== */
+
+/* Fondo degradado oscuro (RGB) y fuente base de toda la página */
+body {
+    background: linear-gradient(180deg, rgb(31, 42, 48), rgb(46, 74, 82));
+    min-height: 100vh;
+    font-family: Georgia, "Times New Roman", serif;
+    color: rgb(240, 244, 245);
+}
+
+/* Clase compartida por <header> y <footer>: mismo fondo, color y esquinas */
+.cabecera-pie {
+    text-align: center;
+    background-color: rgb(47, 111, 115);
+    color: rgb(244, 241, 234);
+    padding: 12px;
+    border-radius: 8px;
+}
+
+/* Id del nombre del alumno: degradado con la misma tonalidad (verde azulado, hue ~200) */
+#nombre-alumno {
+    font-size: 2rem;
+    font-style: italic;
+    background: linear-gradient(90deg, oklch(0.85 0.09 200), oklch(0.98 0.02 200), oklch(0.75 0.11 200));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+/* Barra de navegación centrada */
+nav {
+    text-align: center;
+    background-color: rgb(47, 111, 115);
+    padding: 8px;
+    margin-top: 4px;
+}
+
+/* Enlaces (normales y visitados) en ámbar suave, sin subrayado */
+a,
+a:visited {
+    color: rgb(232, 162, 58);
+    text-decoration: none;
+}
+
+/* Enlace al pasar el ratón: se subraya */
+a:hover {
+    text-decoration: underline;
+}
+
+/* Contenedor principal: centra la tabla con espacio alrededor */
+main {
+    padding: 30px 16px;
+}
+
+/* Pie de página: texto centrado y con margen superior */
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* ===== 3. TABLA DEL HORARIO ===== */
+
+/* Tabla centrada, SIN espacios entre celdas (border-collapse) y con borde exterior */
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+    background-color: rgb(255, 255, 255);
+    border: 3px double oklch(0.45 0.1 10);
+}
+
+/* Título de la tabla */
+caption {
+    font-size: 1.4rem;
+    font-weight: bold;
+    font-style: italic;
+    padding-bottom: 12px;
+    color: rgb(244, 241, 234);
+}
+
+/* Todas las celdas: texto centrado, borde fino VISIBLE (verde oscuro) y color de texto oscuro legible */
+th,
+td {
+    text-align: center;
+    padding: 12px 6px;
+    border: 1px solid rgb(47, 111, 115);
+    color: rgb(30, 35, 38);
+    font-weight: bold;
+}
+
+/* Cabecera de días y columna de horas: fondo blanco, texto en cursiva */
+thead th,
+tbody th {
+    background-color: rgb(255, 255, 255);
+    font-style: italic;
+    font-weight: normal;
+}
+
+/* Pie de la tabla: fondo blanco y texto pequeño */
+tfoot td {
+    background-color: rgb(255, 255, 255);
+    font-size: 0.9rem;
+    font-weight: normal;
+}
+
+/* ===== 4. COLORES DE CADA MÓDULO (OKLCH, tonos suaves) ===== */
+
+/* Módulo SOR: fondo verde menta en OKLCH para las celdas de Sistemas Operativos en Red */
+.sor {
+    background-color: oklch(0.8 0.13 170);
+}
+
+/* Módulo APWEB: fondo rosa suave en OKLCH para las celdas de Aplicaciones Web */
+.apweb {
+    background-color: oklch(0.82 0.12 340);
+}
+
+/* Módulo SRED: fondo lila en OKLCH para las celdas de Servicios de Red */
+.sred {
+    background-color: oklch(0.76 0.12 295);
+}
+
+/* Módulo SGI: fondo naranja suave en OKLCH para las celdas de Seguridad */
+.sgi {
+    background-color: oklch(0.78 0.13 50);
+}
+
+/* Módulo IPE: fondo verde lima suave en OKLCH para las celdas de Empresa */
+.ipe {
+    background-color: oklch(0.84 0.14 130);
+}
+
+/* Módulo ING: fondo amarillo suave en OKLCH para las celdas de Inglés */
+.ing {
+    background-color: oklch(0.9 0.12 95);
+}
+
+/* Módulo OPTV: fondo azul cielo en OKLCH para las celdas de la optativa */
+.optv {
+    background-color: oklch(0.8 0.1 235);
+}
+
+/* Módulo PROY: fondo coral claro en OKLCH para las celdas de Proyecto */
+.proy {
+    background-color: oklch(0.78 0.11 15);
+}
+
+/* Fila de RECREO: fondo fucsia apagado en OKLCH que ocupa toda la fila */
+.recreo {
+    background-color: oklch(0.78 0.12 320);
+    letter-spacing: 0.15em;
+    font-weight: normal;
 }

@@ -2,27 +2,27 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Daniel Gómez Sánchez">
     <meta name="description" content="Horario del ciclo formativo">
     <meta name="keywords" content="horario, clases, ciclo, tabla">
     <title>Horario del ciclo</title>
+   <link rel="stylesheet" type="text/css" href="../css/estilo.css"/>
+
 </head>
 <body>
 
-<header>
-    <h1>Horario del ciclo</h1>
+<header class="cabecera-pie">
+    <h1 id="nombre-alumno">Daniel Gómez Sánchez</h1>
 </header>
 
 <nav>
-     <p><a href="../index.html">← Volver al menú</a></p>
-
+    <p><a href="../index.html">← Volver al menú</a></p>
 </nav>
-<main>
-    <table border="1">
-        <!-- Título de la tabla -->
-        <caption>Horario semanal</caption>
 
-        <!-- Encabezado de la tabla -->
+<main>
+    <table>
+        <caption>Horario semanal</caption>
         <thead>
             <tr>
                 <th>Horas</th>
@@ -33,64 +33,55 @@
                 <th>Viernes</th>
             </tr>
         </thead>
-
-        <!-- Cuerpo de la tabla con los datos -->
         <tbody>
             <tr>
                 <th>8:15 - 9:15</th>
-                <td>SOR</td>
-                <td>SOR</td>
-                <td>OPTV</td>
-                <td>SGI</td>
-                <td>SGI</td>
+                <td class="sor">SOR</td>
+                <td class="sor" rowspan="2">SOR</td>
+                <td class="optv">OPTV</td>
+                <td class="sgi" rowspan="2">SGI</td>
+                <td class="sgi" rowspan="2">SGI</td>
             </tr>
             <tr>
                 <th>9:15 - 10:15</th>
-                <td>APWEB</td>
-                <td>SOR</td>
-                <td>APWEB</td>
-                <td>SGI</td>
-                <td>SGI</td>
+                <td class="apweb">APWEB</td>
+                <td class="apweb">APWEB</td>
             </tr>
             <tr>
                 <th>10:15 - 11:15</th>
-                <td>SRED</td>
-                <td>ING</td>
-                <td>SRED</td>
-                <td>SOR</td>
-                <td>OPTV</td>
+                <td class="sred">SRED</td>
+                <td class="ing">ING</td>
+                <td class="sred">SRED</td>
+                <td class="sor">SOR</td>
+                <td class="optv">OPTV</td>
             </tr>
             <tr>
                 <th>11:15 - 11:45</th>
-                <td colspan="5">RECREO</td>
+                <td class="recreo" colspan="5">RECREO</td>
             </tr>
             <tr>
                 <th>11:45 - 12:45</th>
-                <td>PROY</td>
-                <td>IPE</td>
-                <td>SOR</td>
-                <td>SRED</td>
-                <td>IPE</td>
+                <td class="proy">PROY</td>
+                <td class="ipe">IPE</td>
+                <td class="sor">SOR</td>
+                <td class="sred">SRED</td>
+                <td class="ipe">IPE</td>
             </tr>
             <tr>
                 <th>12:45 - 13:45</th>
-                <td>OPTAV</td>
-                <td>SRED</td>
-                <td>PROY</td>
-                <td>APWEB</td>
-                <td>SOR</td>
+                <td class="optv">OPTV</td>
+                <td class="sred" rowspan="2">SRED</td>
+                <td class="proy">PROY</td>
+                <td class="apweb" rowspan="2">APWEB</td>
+                <td class="sor">SOR</td>
             </tr>
             <tr>
                 <th>13:45 - 14:45</th>
-                <td>IPE</td>
-                <td>SRED</td>
-                <td>ING</td>
-                <td>APWEB</td>
-                <td>SRED</td>
+                <td class="ipe">IPE</td>
+                <td class="ing">ING</td>
+                <td class="sred">SRED</td>
             </tr>
         </tbody>
-
-        <!-- Pie de la tabla (resumen) -->
         <tfoot>
             <tr>
                 <td colspan="6">Curso 2026/2027</td>
@@ -98,10 +89,9 @@
         </tfoot>
     </table>
 </main>
-   
 
-<footer>
-    © 2026
+<footer class="cabecera-pie">
+    <p>© 2026</p>
 </footer>
 
 </body>
