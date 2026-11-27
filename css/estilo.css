@@ -1,80 +1,11 @@
-body{
-    
-  background: linear-gradient(180deg, #1f2a30, #2e4a52);
-    min-height: 100vh;
-}
-
-
-              background-image: url("../restaurante/img/fondoindex1.jpg");
-header{
-              text-align: center;
-               background-color:  #2f6f73;
-               padding: 1px;
-               border-radius: 8px;
-               color:#f4f1ea;
-}
-
-nav{
-               text-align: center;
-                background-color:#2f6f73;
-}
-
-main {
-              color:aliceblue;
-}
-
-.mi-imagen {
-            width: 700px;            /* ancho */
-             height: auto;            /* alto proporcional */
-             border-radius: 10px;     /* esquinas redondeadas */
-                border: 3px solid #333;  /* borde */
-               box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* sombra */
-             opacity: 0.9;            /* transparencia */
-            display: block;
-             margin: 0 auto;
-}
-a,
-a:visited {
-                  color:#e8a23a;            /* el color que quieras */
-                 text-decoration: none;  /* quita el subrayado (opcional) */
-}
-
-a:hover{
-                  text-decoration: underline;
-                   color:#e8a23a;
-}
-footer{
-                   color:aliceblue
-}
-ul > li {
-                 text-align: left;
-}
-
-h2 {
-                  text-align: center;
-                   color: #e8a23a;
-}
-
-.titulo-menu {
-                   text-align:left;
-                   color: #e8a23a;
-}
-h1 {
-    color: #f4f1ea;
-    text-align: center;
-}
-/* ===== 1. RESETEO DE ESTILOS ===== */
-
-/* Quita márgenes y rellenos por defecto y hace que el padding no agrande las cajas */
+/* reseteo: quito margenes y padding de todo */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ===== 2. ESTILOS GENERALES ===== */
-
-/* Fondo degradado oscuro (RGB) y fuente base de toda la página */
+/* fondo degradado oscuro y letra de toda la pagina */
 body {
     background: linear-gradient(180deg, rgb(31, 42, 48), rgb(46, 74, 82));
     min-height: 100vh;
@@ -82,7 +13,399 @@ body {
     color: rgb(240, 244, 245);
 }
 
-/* Clase compartida por <header> y <footer>: mismo fondo, color y esquinas */
+/* titulo principal centrado y claro */
+h1 {
+    color: rgb(244, 241, 234);
+    text-align: center;
+}
+
+/* menu de navegacion centrado con fondo verde azulado */
+nav {
+    text-align: center;
+    background-color: rgb(47, 111, 115);
+    padding: 8px;
+    margin-top: 4px;
+}
+
+/* enlaces en color ambar y sin subrayado */
+a,
+a:visited {
+    color: rgb(232, 162, 58);
+    text-decoration: none;
+}
+
+/* al pasar el raton el enlace se subraya */
+a:hover {
+    text-decoration: underline;
+}
+
+/* el main con espacio alrededor */
+main {
+    padding: 30px 16px;
+}
+
+/* separacion del pie de pagina */
+footer {
+    margin-top: 20px;
+}
+
+/* subtitulos centrados en ambar */
+h2,
+h3 {
+    text-align: center;
+    color: rgb(232, 162, 58);
+    margin-bottom: 14px;
+}
+
+/* ---------- FORMULARIOS (parte comun) ---------- */
+
+/* cada seccion de formulario centrada, con letra tipo Times */
+#inscripcion,
+#club {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 13px;
+    padding: 20px 16px;
+    max-width: 860px;
+    margin: 0 auto 20px;
+}
+
+/* los fieldset llevan texto negro y un borde fino */
+fieldset {
+    margin-bottom: 5px;
+    padding: 6px 10px;
+    border: 2px groove rgb(150, 160, 160);
+    color: rgb(0, 0, 0);
+}
+
+/* la leyenda en una cajita redondeada de color verde oscuro con letra clara */
+legend {
+    background-color: rgb(47, 111, 115);
+    color: rgb(244, 241, 234);
+    border: 1px solid rgb(232, 162, 58);
+    border-radius: 6px;
+    padding: 1px 8px;
+    font-size: 12px;
+}
+
+/* los parrafos del formulario sin margenes */
+form p {
+    margin: 0;
+}
+
+/* etiquetas, campos y botones usan la letra del formulario */
+label,
+input,
+select,
+textarea,
+button {
+    font-family: inherit;
+    font-size: 13px;
+}
+
+/* campos de texto, fecha, email, telefono, select y textarea con fondo blanco */
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    background-color: rgb(255, 255, 255);
+    border: none;
+    padding: 1px 3px;
+    height: 17px;
+}
+
+/* caja de los botones, centrada */
+.botones {
+    display: flex;
+    justify-content: center;
+    gap: 3px;
+    margin-top: 10px;
+}
+
+/* botones normales de color gris claro */
+button {
+    padding: 2px 6px;
+    height: 24px;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 12px;
+    background-color: rgb(235, 235, 235);
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(190, 190, 190);
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+/* boton un poco mas oscuro al pasar el raton */
+button:hover {
+    background-color: rgb(215, 215, 215);
+}
+
+/* ---------- FORMULARIO 1: HOJA DE INSCRIPCION ---------- */
+
+/* titulos en Comic Sans, claros y centrados */
+#inscripcion h2,
+#inscripcion h3 {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 17px;
+    color: rgb(244, 241, 234);
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+/* el formulario con ancho de 450px y centrado */
+#inscripcion form {
+    max-width: 450px;
+    margin: 20px auto 0;
+}
+
+/* datos personales: fondo gris verdoso y 3 columnas */
+.f-datos {
+    background-color: rgb(160, 175, 178);
+    display: grid;
+    grid-template-columns: repeat(3, 115px);
+    justify-content: start;
+    padding: 4px 8px 6px;
+}
+
+/* etiqueta encima del campo */
+.f-datos label {
+    display: block;
+    margin-top: 2px;
+}
+
+/* campos de datos personales de 112px */
+.f-datos input {
+    width: 112px;
+    display: block;
+}
+
+/* select de provincia pequeño */
+.f-datos select {
+    width: 60px;
+    display: block;
+}
+
+/* la direccion ocupa dos columnas */
+.ancho-doble {
+    grid-column: span 2;
+}
+
+/* campo de direccion mas largo */
+.f-datos .ancho-doble input {
+    width: 202px;
+}
+
+/* forma de acceso: fondo color arena */
+.f-acceso {
+    background-color: rgb(232, 200, 170);
+    padding: 16px 8px 10px 36px;
+}
+
+/* las opciones de Directo van con sangria */
+.sub {
+    margin-left: 25px;
+}
+
+/* campos de texto del acceso */
+.f-acceso input[type="text"] {
+    width: 112px;
+}
+
+/* documentos adjuntados: fondo rosa viejo y en fila */
+.f-docs {
+    background-color: rgb(190, 140, 145);
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    padding: 6px 10px 8px;
+}
+
+/* campo de texto de documentos */
+.f-docs input[type="text"] {
+    width: 112px;
+}
+
+/* ---------- FORMULARIO 2: CLUB ---------- */
+
+/* titulo del club en cursiva y negrita con sombra */
+#club h2 {
+    font-size: 20px;
+    font-style: italic;
+    font-weight: bold;
+    line-height: 1.15;
+    color: rgb(244, 241, 234);
+    text-shadow: 2px 2px 3px rgb(0, 0, 0);
+    max-width: 560px;
+    margin: 0 auto 18px;
+}
+
+/* formulario del club de 600px y centrado */
+#club form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* los dos fieldset del club sin borde y con dos esquinas redondeadas */
+.f-club1,
+.f-club2 {
+    border: none;
+    border-radius: 40px 0 40px 0;
+    padding: 4px 14px 14px;
+    margin-bottom: 30px;
+}
+
+/* datos personales del club: fondo marron claro */
+.f-club1 {
+    background-color: rgb(180, 145, 95);
+    box-shadow: 0 10px 10px -4px rgb(215, 160, 70);
+}
+
+/* otra informacion: fondo amarillo suave y sombra gris */
+.f-club2 {
+    background-color: rgb(235, 195, 120);
+    box-shadow: 7px 9px 8px -3px rgba(0, 0, 0, 0.6);
+}
+
+/* leyendas del club a la derecha, sin caja */
+.f-club1 legend,
+.f-club2 legend {
+    float: right;
+    width: 100%;
+    text-align: right;
+    background: none;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 0;
+    margin-bottom: 6px;
+    font-size: 12px;
+}
+
+/* cada fila de datos personales: etiqueta y campo en linea */
+.f-club1 p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+/* etiquetas de datos personales a la derecha y en negrita */
+.f-club1 label.etiqueta,
+.f-club1 span.etiqueta {
+    flex: 0 0 125px;
+    text-align: right;
+    font-weight: bold;
+    padding-right: 4px;
+}
+
+/* separacion entre los radios */
+.f-club1 input[type="radio"] + label {
+    margin-right: 6px;
+}
+
+/* nombre y domicilio de 320px */
+.f-club1 input[size="40"] {
+    width: 320px;
+    flex: none;
+}
+
+/* ancho del correo */
+#c_email {
+    width: 145px;
+}
+
+/* ancho del telefono */
+#c_tel {
+    width: 80px;
+}
+
+/* ancho del select de pais */
+#c_pais {
+    width: 95px;
+}
+
+/* etiquetas y preguntas del segundo bloque en negrita */
+.f-club2 label,
+.f-club2 .pregunta {
+    font-weight: bold;
+}
+
+/* fila de componentes: texto y lista juntos */
+.fila-componentes {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 4px;
+    margin-bottom: 12px;
+}
+
+/* lista de componentes con 4 filas de alto */
+#componentes {
+    width: 75px;
+    height: 64px;
+    padding: 0 2px;
+}
+
+/* parrafo con poco margen abajo */
+.sin-margen {
+    margin-bottom: 4px;
+}
+
+/* actividades en 3 columnas */
+.rejilla {
+    display: grid;
+    grid-template-columns: 177px 143px 1fr;
+    row-gap: 4px;
+    margin-bottom: 24px;
+}
+
+/* las etiquetas de actividades sin negrita */
+.f-club2 .rejilla label {
+    font-weight: normal;
+}
+
+/* cuadro de texto del motivo */
+#motivo {
+    display: block;
+    width: 430px;
+    height: 42px;
+    margin: 6px 0 24px;
+    padding: 2px;
+}
+
+/* campo de la peli favorita */
+#peli {
+    width: 143px;
+}
+
+/* caja de los dos botones del club */
+.botones-club {
+    max-width: 448px;
+    margin: 0 auto;
+    gap: 6px;
+}
+
+/* botones del club marrones y redondeados con letra blanca */
+.botones-club button {
+    flex: 1;
+    height: 32px;
+    border: none;
+    border-radius: 16px;
+    background-color: rgb(95, 70, 45);
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.45);
+}
+
+/* boton del club mas claro al pasar el raton */
+.botones-club button:hover {
+    background-color: rgb(125, 95, 60);
+}
+
+/* ---------- PAGINA DEL HORARIO ---------- */
+
+/* header y footer del horario con la misma clase */
 .cabecera-pie {
     text-align: center;
     background-color: rgb(47, 111, 115);
@@ -91,7 +414,7 @@ body {
     border-radius: 8px;
 }
 
-/* Id del nombre del alumno: degradado con la misma tonalidad (verde azulado, hue ~200) */
+/* nombre del alumno con degradado */
 #nombre-alumno {
     font-size: 2rem;
     font-style: italic;
@@ -102,40 +425,7 @@ body {
     color: transparent;
 }
 
-/* Barra de navegación centrada */
-nav {
-    text-align: center;
-    background-color: rgb(47, 111, 115);
-    padding: 8px;
-    margin-top: 4px;
-}
-
-/* Enlaces (normales y visitados) en ámbar suave, sin subrayado */
-a,
-a:visited {
-    color: rgb(232, 162, 58);
-    text-decoration: none;
-}
-
-/* Enlace al pasar el ratón: se subraya */
-a:hover {
-    text-decoration: underline;
-}
-
-/* Contenedor principal: centra la tabla con espacio alrededor */
-main {
-    padding: 30px 16px;
-}
-
-/* Pie de página: texto centrado y con margen superior */
-footer {
-    text-align: center;
-    margin-top: 20px;
-}
-
-/* ===== 3. TABLA DEL HORARIO ===== */
-
-/* Tabla centrada, SIN espacios entre celdas (border-collapse) y con borde exterior */
+/* tabla centrada con los bordes juntos */
 table {
     border-collapse: collapse;
     margin: 0 auto;
@@ -145,7 +435,7 @@ table {
     border: 3px double oklch(0.45 0.1 10);
 }
 
-/* Título de la tabla */
+/* titulo de la tabla */
 caption {
     font-size: 1.4rem;
     font-weight: bold;
@@ -154,7 +444,7 @@ caption {
     color: rgb(244, 241, 234);
 }
 
-/* Todas las celdas: texto centrado, borde fino VISIBLE (verde oscuro) y color de texto oscuro legible */
+/* celdas centradas con borde y texto oscuro */
 th,
 td {
     text-align: center;
@@ -164,7 +454,7 @@ td {
     font-weight: bold;
 }
 
-/* Cabecera de días y columna de horas: fondo blanco, texto en cursiva */
+/* cabecera de dias y columna de horas en blanco y cursiva */
 thead th,
 tbody th {
     background-color: rgb(255, 255, 255);
@@ -172,56 +462,54 @@ tbody th {
     font-weight: normal;
 }
 
-/* Pie de la tabla: fondo blanco y texto pequeño */
+/* pie de la tabla con letra pequeña */
 tfoot td {
     background-color: rgb(255, 255, 255);
     font-size: 0.9rem;
     font-weight: normal;
 }
 
-/* ===== 4. COLORES DE CADA MÓDULO (OKLCH, tonos suaves) ===== */
-
-/* Módulo SOR: fondo verde menta en OKLCH para las celdas de Sistemas Operativos en Red */
+/* color del modulo SOR */
 .sor {
     background-color: oklch(0.8 0.13 170);
 }
 
-/* Módulo APWEB: fondo rosa suave en OKLCH para las celdas de Aplicaciones Web */
+/* color del modulo APWEB */
 .apweb {
     background-color: oklch(0.82 0.12 340);
 }
 
-/* Módulo SRED: fondo lila en OKLCH para las celdas de Servicios de Red */
+/* color del modulo SRED */
 .sred {
     background-color: oklch(0.76 0.12 295);
 }
 
-/* Módulo SGI: fondo naranja suave en OKLCH para las celdas de Seguridad */
+/* color del modulo SGI */
 .sgi {
     background-color: oklch(0.78 0.13 50);
 }
 
-/* Módulo IPE: fondo verde lima suave en OKLCH para las celdas de Empresa */
+/* color del modulo IPE */
 .ipe {
     background-color: oklch(0.84 0.14 130);
 }
 
-/* Módulo ING: fondo amarillo suave en OKLCH para las celdas de Inglés */
+/* color del modulo ING */
 .ing {
     background-color: oklch(0.9 0.12 95);
 }
 
-/* Módulo OPTV: fondo azul cielo en OKLCH para las celdas de la optativa */
+/* color del modulo OPTV */
 .optv {
     background-color: oklch(0.8 0.1 235);
 }
 
-/* Módulo PROY: fondo coral claro en OKLCH para las celdas de Proyecto */
+/* color del modulo PROY */
 .proy {
     background-color: oklch(0.78 0.11 15);
 }
 
-/* Fila de RECREO: fondo fucsia apagado en OKLCH que ocupa toda la fila */
+/* fila del recreo */
 .recreo {
     background-color: oklch(0.78 0.12 320);
     letter-spacing: 0.15em;

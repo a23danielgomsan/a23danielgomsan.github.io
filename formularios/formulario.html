@@ -6,6 +6,7 @@
     <meta name="description" content="Formularios de inscripción en ciclos formativos y cuestionario del club de Amigos de la informática">
     <meta name="keywords" content="formularios, inscripción, ciclos formativos, club, informática">
     <title>Formularios</title>
+   <link rel="stylesheet" type="text/css" href="../css/estilo.css"/>
 </head>
 <body>
     <header>
@@ -13,20 +14,18 @@
     </header>
 
     <nav>
-        <a href="../index.html">Volver al menú principal</a> |
-        
+        <a href="../index.html">Volver al menú principal</a>
     </nav>
 
     <main>
 
-       
         <section id="inscripcion">
             <h2>HOJA DE INSCRIPCIÓN</h2>
             <h3>EN LOS CICLOS FORMATIVOS DE GRADO SUPERIOR</h3>
 
             <form action="#" method="post">
 
-                <fieldset>
+                <fieldset class="f-datos">
                     <legend>Datos Personales</legend>
                     <p>
                         <label for="nombre">Nombre:</label>
@@ -61,9 +60,9 @@
                         <label for="fnac">Fecha de Nacimiento:</label>
                         <input type="date" id="fnac" name="fnac">
                     </p>
-                    <p>
+                    <p class="ancho-doble">
                         <label for="direccion">Dirección:</label>
-                        <input type="text" id="direccion" name="direccion" size="40">
+                        <input type="text" id="direccion" name="direccion">
                     </p>
                     <p>
                         <label for="cp">Código Postal:</label>
@@ -71,36 +70,32 @@
                     </p>
                 </fieldset>
 
-                <fieldset>
+                <fieldset class="f-acceso">
                     <legend>Forma de Acceso</legend>
                     <p>
                         <input type="radio" id="directo" name="acceso" value="directo">
                         <label for="directo">Directo</label>
                     </p>
-                    <p>
-                        &nbsp;&nbsp;&nbsp;&nbsp;
-                        <input type="radio" id="bach" name="directo" value="bachillerato">
+                    <p class="sub">
+                        <input type="radio" id="bach" name="directo_tipo" value="bachillerato">
                         <label for="bach">Bachillerato Log Modalidad</label>
                         <input type="text" name="bach_modalidad">
                     </p>
-                    <p>
-                        
-                        <input type="radio" id="exp" name="directo" value="experimental">
+                    <p class="sub">
+                        <input type="radio" id="exp" name="directo_tipo" value="experimental">
                         <label for="exp">Experimental</label>
                     </p>
-                    <p>
-                        
-                        <input type="radio" id="cou" name="directo" value="cou">
+                    <p class="sub">
+                        <input type="radio" id="cou" name="directo_tipo" value="cou">
                         <label for="cou">COU Opción</label>
                         <input type="text" name="cou_opcion">
                     </p>
-                    <p>
-                       
-                        <input type="radio" id="fp2" name="directo" value="fp2">
+                    <p class="sub">
+                        <input type="radio" id="fp2" name="directo_tipo" value="fp2">
+                        <label for="fp2">FP2</label>
                     </p>
-                    <p>
-                        
-                        <input type="radio" id="otros_acc" name="directo" value="otros">
+                    <p class="sub">
+                        <input type="radio" id="otros_acc" name="directo_tipo" value="otros">
                         <label for="otros_acc">Otros (especifique)</label>
                         <input type="text" name="otros_acceso">
                     </p>
@@ -110,7 +105,7 @@
                     </p>
                 </fieldset>
 
-                <fieldset>
+                <fieldset class="f-docs">
                     <legend>Documentos Adjuntados</legend>
                     <p>
                         <input type="checkbox" id="dni_doc" name="docs" value="dni">
@@ -127,34 +122,30 @@
                     </p>
                 </fieldset>
 
-                <p>
+                <div class="botones">
                     <button type="submit">Enviar Solicitud</button>
-                </p>
-                <p>
                     <button type="reset">Limpiar datos</button>
-                </p>
+                </div>
             </form>
         </section>
-
-        <hr>
 
         <section id="club">
             <h2><em>Rellena el siguiente cuestionario para formar parte del club de "Amigos de la informática"</em></h2>
 
             <form action="#" method="post">
 
-                <fieldset>
+                <fieldset class="f-club1">
                     <legend><em>Datos personales</em></legend>
                     <p>
-                        <label for="c_nombre">Nombre:</label>
+                        <label class="etiqueta" for="c_nombre">Nombre:</label>
                         <input type="text" id="c_nombre" name="c_nombre" size="40" required>
                     </p>
                     <p>
-                        <label for="c_domicilio">Domicilio:</label>
+                        <label class="etiqueta" for="c_domicilio">Domicilio:</label>
                         <input type="text" id="c_domicilio" name="c_domicilio" size="40" placeholder="<calle, numero y localidad>">
                     </p>
                     <p>
-                        <label for="c_pais">País de origen:</label>
+                        <label class="etiqueta" for="c_pais">País de origen:</label>
                         <select id="c_pais" name="c_pais">
                             <option>España</option>
                             <option>Portugal</option>
@@ -165,35 +156,35 @@
                         </select>
                     </p>
                     <p>
-                        <label for="c_fnac">Fecha de nacimiento:</label>
+                        <label class="etiqueta" for="c_fnac">Fecha de nacimiento:</label>
                         <input type="date" id="c_fnac" name="c_fnac">
                     </p>
                     <p>
-                        <label for="c_email">Correo electrónico:</label>
+                        <label class="etiqueta" for="c_email">Correo electrónico:</label>
                         <input type="email" id="c_email" name="c_email">
                     </p>
                     <p>
-                        <label for="c_tel">Teléfono:</label>
+                        <label class="etiqueta" for="c_tel">Teléfono:</label>
                         <input type="tel" id="c_tel" name="c_tel">
                     </p>
                     <p>
-                        Estado civil:
+                        <span class="etiqueta">Estado civil:</span>
                         <input type="radio" id="ec1" name="estado_civil" value="soltero"><label for="ec1">Solter@</label>
                         <input type="radio" id="ec2" name="estado_civil" value="casado" checked><label for="ec2">Casad@</label>
                         <input type="radio" id="ec3" name="estado_civil" value="separado"><label for="ec3">Separad@</label>
                         <input type="radio" id="ec4" name="estado_civil" value="viudo"><label for="ec4">Viud@</label>
                     </p>
                     <p>
-                        Sexo:
+                        <span class="etiqueta">Sexo:</span>
                         <input type="radio" id="sx1" name="sexo" value="hombre"><label for="sx1">Hombre</label>
                         <input type="radio" id="sx2" name="sexo" value="mujer"><label for="sx2">Mujer</label>
                     </p>
                 </fieldset>
 
-                <fieldset>
+                <fieldset class="f-club2">
                     <legend><em>Otra información de interés</em></legend>
 
-                    <p>
+                    <p class="fila-componentes">
                         <label for="componentes">Seleccione los componentes electrónicos con los que habitualmente trabajas:</label>
                         <select id="componentes" name="componentes" multiple size="4">
                             <option>Móvil</option>
@@ -203,19 +194,21 @@
                         </select>
                     </p>
 
-                    <p>
-                        Seleccione tus actividades favoritas:
-                        <input type="checkbox" id="a1" name="actividades" value="deporte"><label for="a1">Hacer deporte</label>
-                        <input type="checkbox" id="a2" name="actividades" value="amigos"><label for="a2">Salir con mis amigos</label>
-                        <input type="checkbox" id="a3" name="actividades" value="series"><label for="a3">Ver series, pelis,...</label>
-                        <input type="checkbox" id="a4" name="actividades" value="senderismo"><label for="a4">Realizar rutas de senderismo</label>
-                        <input type="checkbox" id="a5" name="actividades" value="cine"><label for="a5">Ir al cine</label>
-                        <input type="checkbox" id="a6" name="actividades" value="musica"><label for="a6">Escuchar música</label>
+                    <p class="sin-margen">
+                        <span class="pregunta">Seleccione tus actividades favoritas:</span>
                     </p>
+                    <div class="rejilla">
+                        <span><input type="checkbox" id="a1" name="actividades" value="deporte"><label for="a1">Hacer deporte</label></span>
+                        <span><input type="checkbox" id="a2" name="actividades" value="amigos"><label for="a2">Salir con mis amigos</label></span>
+                        <span><input type="checkbox" id="a3" name="actividades" value="series"><label for="a3">Ver series, pelis,...</label></span>
+                        <span><input type="checkbox" id="a4" name="actividades" value="senderismo"><label for="a4">Realizar rutas de senderismo</label></span>
+                        <span><input type="checkbox" id="a5" name="actividades" value="cine"><label for="a5">Ir al cine</label></span>
+                        <span><input type="checkbox" id="a6" name="actividades" value="musica"><label for="a6">Escuchar música</label></span>
+                    </div>
 
                     <p>
                         <label for="motivo">Explique brevemente el motivo por el que desea ingresar en nuestro club:</label><br>
-                        <textarea id="motivo" name="motivo" rows="4" cols="60"></textarea>
+                        <textarea id="motivo" name="motivo" rows="4"></textarea>
                     </p>
 
                     <p>
@@ -231,12 +224,10 @@
                     </p>
                 </fieldset>
 
-                <p>
+                <div class="botones botones-club">
                     <button type="submit">Enviar</button>
-                </p>
-                <p>
                     <button type="reset">Cancelar</button>
-                </p>
+                </div>
             </form>
         </section>
 
